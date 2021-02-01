@@ -45,6 +45,7 @@
 
 - `MuiGrid-container` 可設定 `MuiGrid-spacing-{size}-{1 ~ 6}` 增加欄位間距
 - Grid column 可設定 1 ~ 12 並根據需要修改設定 `sm`、`md`、`lg`、`xl` 等尺寸的欄位寬度。
+- 網格系統為 Mobile first，可先由小網的寬度開始設定，再逐步根據 CSS 斷點往上設定，小網可設定 `MuiGrid-grid-xs-{1 ~ 12}` 或不下寬度參數 `MuiGrid-grid-{1 ~ 12}`。
 
 **SAMPLE**
 ```html
@@ -68,6 +69,7 @@ uiGrid-spacing-xs-{space} 間距為 0 ~ 10，以 8px 為單位增加。
 <!--  欄位設定  -->
 欄位總數相加必須在 12 以內。
 
+
 兩欄排列：
 <div class='MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2'>
   <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-md-6'>
@@ -83,6 +85,14 @@ uiGrid-spacing-xs-{space} 間距為 0 ~ 10，以 8px 為單位增加。
   <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-md-4'>
   </div>
   <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-md-4'>
+  </div>
+</div>
+
+RWD 設定：
+<div class='MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2'>
+  <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-3'>
+  </div>
+  <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-3'>
   </div>
 </div>
 
